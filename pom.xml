@@ -3,7 +3,7 @@
 
 	<groupId>com.linguofeng.android</groupId>
 	<artifactId>android-dynamic-loading-framework</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>android-dynamic-loading-framework</name>
@@ -18,7 +18,7 @@
 		<url>https://github.com/linguofeng/android-dynamic-loading-framework/tree/${scm.branch}</url>
 		<connection>scm:git:git://github.com/linguofeng/android-dynamic-loading-framework.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/linguofeng/android-dynamic-loading-framework.git</developerConnection>
-	  <tag>android-dynamic-loading-framework-0.0.2</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<distributionManagement>
