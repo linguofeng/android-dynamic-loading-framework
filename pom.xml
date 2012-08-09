@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.linguofeng.android</groupId>
+	<artifactId>android-dynamic-loading-framework</artifactId>
+	<version>0.0.2</version>
+	<packaging>pom</packaging>
+
+	<name>android-dynamic-loading-framework</name>
+	<url>https://github.com/linguofeng/android-dynamic-loading-framework</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<scm.branch>master</scm.branch>
+	</properties>
+
+	<scm>
+		<url>https://github.com/linguofeng/android-dynamic-loading-framework/tree/${scm.branch}</url>
+		<connection>scm:git:git://github.com/linguofeng/android-dynamic-loading-framework.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/linguofeng/android-dynamic-loading-framework.git</developerConnection>
+	  <tag>android-dynamic-loading-framework-0.0.2</tag>
+  </scm>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://172.16.20.54:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://172.16.20.54:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.3.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>1.7</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-scm-plugin</artifactId>
+				<configuration>
+					<scmVersionType>branch</scmVersionType>
+					<scmVersion>${scm.branch}</scmVersion>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Build-Source-Version>1.5</Build-Source-Version>
+							<Build-Target-Version>1.5</Build-Target-Version>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
